@@ -1,0 +1,5 @@
+Working
+LM35 temperature measure madutte
+Arduino A0 pin nalli value read madutte
+Temperature > 30°C → Relay ON → Fan ON
+Temperature < 30°C → Relay OFF → Fan OFF
