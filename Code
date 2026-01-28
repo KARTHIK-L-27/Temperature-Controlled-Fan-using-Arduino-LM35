@@ -1,0 +1,21 @@
+int tempPin = A0;
+int relayPin = 8;
+
+void setup() {
+  pinMode(relayPin, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  int val = analogRead(tempPin);
+  float temp = (val * 5.0 * 100) / 1024;
+
+  Serial.println(temp);
+
+  if (temp > 30) {
+    digitalWrite(relayPin, HIGH); // Fan ON
+  } else {
+    digitalWrite(relayPin, LOW);  // Fan OFF
+  }
+  delay(1000);
+}
